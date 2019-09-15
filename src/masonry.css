@@ -1,0 +1,23 @@
+body {
+  background-color: brown;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.gallery {
+}
+
+.grid {
+  /* max-width: 1200px; */
+}
+.grid-sizer {
+}
+.grid-sizer,
+.grid-item {
+  width: 33.3333%;
+
+}
+
