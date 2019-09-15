@@ -1,6 +1,6 @@
 import './styles.css';
 import InfiniteScroll from 'infinite-scroll';
-import postTemplate from './templates/post.hbs';
+import photoTemplate from './templates/photo.hbs';
 
 // console.log(InfiniteScroll);
 
@@ -27,7 +27,7 @@ infScrollInstance.on('load', (response, url) => {
 
   console.log(images);
 
-  const markup = images.hits.map(hit => postTemplate(hit)).join('');
+  const markup = images.hits.map(hit => photoTemplate(hit)).join('');
 
   console.log(markup);
   const proxyEl = document.createElement('div');
@@ -40,10 +40,12 @@ infScrollInstance.on('load', (response, url) => {
   // // console.log(markup);
 
 
-  console.log(proxyEl);
-  console.log(proxyEl.children);
+  const parseItems = proxyEl.querySelectorAll('.item-photo');
 
-  infScrollInstance.appendItems(proxyEl.children);
+  console.log(proxyEl);
+  console.log(parseItems);
+
+  infScrollInstance.appendItems(parseItems);
 });
 
 infScrollInstance.loadNextPage();

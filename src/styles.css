@@ -18,4 +18,7 @@ body {
   background-image: url('images/bg-pattern.png');
 }
 
+.item-photo {
+  list-style: none;
+}
 
